@@ -48,6 +48,12 @@ function mouseClick() {
     squares.forEach(square => square.speed = (square.speed + 1) % 4);
 }
 
+function keyPressed() {
+    if (keyCode === 32) {
+        rndBackground = random(255);
+    }
+}
+
 class Point {
     constructor(x, y) {
         this.x = x;
