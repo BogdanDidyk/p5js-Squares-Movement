@@ -3,14 +3,13 @@ let rndBackground;
 let squares;
 
 function setup() {
-    const canvas = createCanvas(500, 500);
-    const canvasElement = canvas.elt;
+    createCanvas(500, 500);
     noStroke();
 
     rndBackground = random(255);
     squares = createMovableSquares(50);
 
-    canvasElement.addEventListener('click', mouseClick);
+    canvas.addEventListener('click', mouseClick);
 }
 
 function draw() {
