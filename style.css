@@ -9,6 +9,11 @@ canvas {
     border: 1px solid black;
 }
 
+#canvas {
+    width: 500px;
+    height: 500px;
+}
+
 p {
     font-family: Arial;
     font-size: 18px

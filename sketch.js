@@ -1,12 +1,9 @@
-let cnv;
-
 const DIRECTIONS = ["up", "right", "down", "left"];
 let rndBackground;
 let squares;
 
 function setup() {
-    cnv = createCanvas(500, 500);
-    cnv.parent("canvas");
+    createCanvasInside("canvas");
 
     noStroke();
     rndBackground = random(255);
@@ -19,6 +16,12 @@ function draw() {
     background(rndBackground);
 
     squares.forEach(square => square.updatePosition());
+}
+
+function createCanvasInside(containerId) {
+    const container = document.getElementById(containerId);
+    const canvas = createCanvas(container.clientWidth, container.clientHeight);
+    canvas.parent(containerId);
 }
 
 function getRandomRGBA(alphaFrom = 0.1, alphaTo = 0.7) {
