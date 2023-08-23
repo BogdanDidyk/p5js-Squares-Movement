@@ -1,11 +1,14 @@
+let cnv;
+
 const DIRECTIONS = ["up", "right", "down", "left"];
 let rndBackground;
 let squares;
 
 function setup() {
-    createCanvas(500, 500);
-    noStroke();
+    cnv = createCanvas(500, 500);
+    cnv.parent("canvas");
 
+    noStroke();
     rndBackground = random(255);
     squares = createMovableSquares(50);
 
